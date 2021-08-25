@@ -34,13 +34,13 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) • ** اهلا بك عزيزي : **
+ **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀʟʟᴏᴡ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ɢʀᴏᴜᴘs ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ's ᴠᴏɪᴄᴇ ᴄʜᴀᴛs !**
 
-- ** في بوت تشغيل الاغاني في المكالمات الجماعيه **
-- ** قم برفعي مشرف في مجموعتك مع الحساب المساعد **
+ **ғɪɴᴅ ᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ's ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ʜᴏᴡ ᴛʜᴇ ᴡᴏʀᴋ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ » ᴄᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ !**
 
- ** طريقة تفعيل البوت اختر من الازرار **
-** العرظ اومر البوت اظغط /help او ارسال كلمه : الاوامر **
+ **ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀʟʟ ғᴇᴀᴛᴜʀᴇ ᴏғ ᴛʜɪs ʙᴏᴛ, ᴊᴜsᴛ ᴛʏᴘᴇ /help**
+
+✂ **ɪ ᴡᴀs ᴍᴀᴅᴇ ʙʏ ѕᴀʟᴇᴍ & ᴜғᴏ ғᴏʀ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ ᴏɴ ᴠᴄɢ**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
