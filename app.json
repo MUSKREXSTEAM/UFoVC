@@ -1,6 +1,6 @@
 {
     "name": "UFOVc",
-    "logo": "https://telegra.ph/file/7618711bbdb9f03ed989e.jpg",
+    "logo": "https://telegra.ph/file/1efd7d92d734678b2d00f.png",
     "description": "UFO Music Voice Chat.",
     "keywords": ["music", "voice chat", "telegram"],
     "repository": "https://github.com/MUSKREXSTEAM/UFOVc",
@@ -32,12 +32,12 @@
         "BG_IMAGE": {
             "description": "خلــفية",
             "required": false,
-            "value": "https://telegra.ph/file/6d31d6b18722ce94521cb.jpg"
+            "value": "https://telegra.ph/file/1efd7d92d734678b2d00f.png"
         },
         "THUMB_IMG": {
             "description": "سيبــها زي مهي عادي يبا -> bg_image",
             "required": false,
-            "value": "https://telegra.ph/file/6d31d6b18722ce94521cb.jpg"
+            "value": "https://telegra.ph/file/1efd7d92d734678b2d00f.png"
         },
         "OWNER_NAME": {
             "description": "حط يوزركـــ منغــير -> @",
@@ -69,7 +69,7 @@
         "UPDATES_CHANNEL": {
             "description": "تحديثاتــ سورس يــوفـــو !!!",
             "required": false,
-            "value": "QQOQQD"
+            "value": "OR_33"
         },
         "GROUP_SUPPORT": {
             "description": "جروبــ الدعــم",
