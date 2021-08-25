@@ -110,43 +110,63 @@ async def help(client: Client, message: Message):
 async def help_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Hello {message.from_user.mention()}, welcome to help menu ✨
-\n📙 HOW TO USE ME ?
-\n1. first add me to your group.
-2. promote me as admin and give all permission.
-3. then, add @{ASSISTANT_NAME} to your group or type /userbotjoin.
-3. make sure you turn on the voice chat first before start playing music.
-\n💁🏻‍♀️ **commands for all user:**
-\n/play (song name) - play song from youtube
-/stream (reply to audio) - play song using audio file
-/playlist - show the list song in queue
-/song (song name) - download song from youtube
-/search (video name) - search video from youtube detailed
-/vsong (video name) - download video from youtube detailed
-/lyric - (song name) lyrics scrapper
-/vk (song name) - download song from inline mode
-\n👷🏻‍♂️ **commands for admins:**
-\n/player - open music player settings panel
-/pause - pause the music streaming
-/resume - resume the music was paused
-/skip - skip to the next song
-/end - stop music streaming
-/userbotjoin - invite assistant join to your group
-/reload - for refresh the admin list
-/cache - for cleared admin cache
-/auth - authorized user for using music bot
-/deauth - unauthorized for using music bot
-/musicplayer (on / off) - disable / enable music player in your group
-\n🎧 channel streaming commands:
-\n/cplay - stream music on channel voice chat
-/cplayer - show the song in streaming
-/cpause - pause the streaming music
-/cresume - resume the streaming was paused
-/cskip - skip streaming to the next song
-/cend - end the streaming music
-/admincache - refresh the admin cache
-\n🧙‍♂️ command for sudo users:
-\n/userbotleaveall - order the assistant to leave from all group
-/gcast - send a broadcast message trought the assistant
+• الاوامر 🛠 
+
+- /play <اسم الأغنية> 
+ـ تشغيل الأغنية التي طلبتها. 
+
+- /playlist 
+ـ عرض قائمة التشغيل الآن. 
+
+- /song <اسم الاغنيه>
+ـ تنزيل الأغاني التي تريدها بسرعة. 
+
+- /search <اسم الاغنيه> 
+ـ البحث في اليوتيوب مع التفاصيل. 
+
+- /vsong <اسم الاغنيه>
+ـ تنزيل مقاطع الفيديو التي تريدها بسرعة
+
+- /lyric <اسم الاغنيه>
+ـ إحضار كلمات الاغنيه. 
+
+• الاوامر الخاصه بِ المشرفين فقط 👷‍♂️ . 
+ 
+- /player  
+ـ فتح لوحة إعدادات مشغل الموسيقى
+
+- /pause 
+ـ وقف تشغيل الاغنيه الحاليه. 
+
+- /resume
+ـ استئناف تشغيل الأغنية. 
+
+- /skip 
+ـ التقدم للأغنية التالية
+
+- /end 
+ـ إيقاف تشغيل الموسيقى. 
+
+- /musicplayer on 
+ـ لتعطيل مشغل الموسيقى في مجموعتك. 
+
+- /musicplayer off 
+- لتمكين مشغل الموسيقى في مجموعتك. 
+
+- /userbotjoin 
+- دعوة المساعد إلى الدردشه الحاليه 
+
+- /userbotleave 
+- إزالة المساعد من الدردشة الحالية. 
+
+- /reload 
+- تحديث قائمة الإدارة. 
+
+- /uptime 
+- التحقق من وقت تشغيل البوت
+
+- /ping 
+- تحقق من حالة البوت
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -160,7 +180,7 @@ async def help_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "♞🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/WzUserBoT/6"
+                        "⌯سروس البوت", url=f"https://t.me/QQOQQD"
                     )
                 ]
             ]
