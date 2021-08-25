@@ -46,22 +46,22 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕اظف البوت المجموعه➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
                          "⌯الاوامر", url="https://t.me/WzUserBoT/10"
                     ),
                     InlineKeyboardButton(
-                        "⌯ الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
+                        "⌯الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "⌯قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯ سورس البوت", url=f"https://t.me/QQOQQD")               
+                        "⌯سورس البوت", url=f"https://t.me/QQOQQD")               
                  ],[
                     InlineKeyboardButton(
-                        "⌯ المطور", url="https://t.me/{UPDATES_CHANNEL}"
+                        "⌯المطور", url="https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
