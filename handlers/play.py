@@ -511,7 +511,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
                     InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/wzthon")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
                 ],
             ]
         )
@@ -558,7 +558,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
                     InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/wzthon")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
                 ],
             ]
         )
@@ -642,7 +642,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
                     InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/wzthon")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
                 ],
             ]
             )
