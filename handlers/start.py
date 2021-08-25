@@ -49,19 +49,19 @@ async def start_(client: Client, message: Message):
                         "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "📚 ᴄᴏᴍᴍᴀɴᴅs", url="https://t.me/WzUserBoT/10"
+                         "⌯الاوامر", url="https://t.me/WzUserBoT/10"
                     ),
                     InlineKeyboardButton(
-                        "💝 ᴅᴏɴᴀᴛᴇ", url=f"https://t.me/{OWNER_NAME}")
+                        "⌯ الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "👥 ᴏғғɪᴄɪᴀʟ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")               
+                        "⌯ سورس البوت", url=f"https://t.me/QQOQQD")               
                  ],[
                     InlineKeyboardButton(
-                        "🧪", url="https://t.me/WzUserBoT/6"
+                        "⌯ المطور", url="https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
@@ -81,10 +81,10 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "☢ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
@@ -152,10 +152,10 @@ async def help_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "☣ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
                 [
