@@ -508,10 +508,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
+                    InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/wzthon")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/wzthon")
                 ],
             ]
         )
@@ -555,10 +555,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
+                    InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/wzthon")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/wzthon")
                 ],
             ]
         )
@@ -639,10 +639,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
+                    InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/wzthon")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/wzthon")
                 ],
             ]
             )
@@ -738,10 +738,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
-                    InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
+                    InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
+                    InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/wzthon")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
                 ],
             ]
     )
