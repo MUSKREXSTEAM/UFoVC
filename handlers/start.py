@@ -33,11 +33,10 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀʟʟᴏᴡ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ɢʀᴏᴜᴘs ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ's ᴠᴏɪᴄᴇ ᴄʜᴀᴛs !**
-💡 **ғɪɴᴅ ᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ's ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ʜᴏᴡ ᴛʜᴇ ᴡᴏʀᴋ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ » 📚 ᴄᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ !**
-❓ **ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀʟʟ ғᴇᴀᴛᴜʀᴇ ᴏғ ᴛʜɪs ʙᴏᴛ, ᴊᴜsᴛ ᴛʏᴘᴇ /help**
-✂ **ɪ ᴡᴀs ᴍᴀᴅᴇ ʙʏ ѕᴀʟᴇᴍ & ᴜғᴏ ғᴏʀ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ ᴏɴ ᴠᴄɢ**
+        f"""<b> **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
+⌁ ⁞ **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) في بوت تشغيل الاغاني في المكالمه الجماعيه'ارفع البوت مشرف في مجموعتك!**
+⌁ ⁞ **وكذالك رفع [{الحساب المساعد}](https://t.me/{OWNER_NAME}) 'العرظ قائمة اوامر البوت ارسال كلمه ال الاوامر او ظغط على كلمه **
+⌁ ⁞ ** /help**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
