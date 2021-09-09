@@ -20,7 +20,7 @@ async def pause(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ᴀʟʀᴇᴀᴅʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ ?")
+      await message.reply("متصل بالفعل هو الدردشة الخاصة بك ?")
       return    
     chat_id = chid
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
@@ -41,7 +41,7 @@ async def resume(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ᴀʟʀᴇᴀᴅʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ ?")
+      await message.reply("متصل بالفعل هو الدردشة الخاصة بك ?")
       return    
     chat_id = chid
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
@@ -62,7 +62,7 @@ async def stop(_, message: Message):
       conid = conchat.linked_chat.id
       chid = conid
     except:
-      await message.reply("ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ᴀʟʀᴇᴀᴅʏ ᴄᴏɴɴᴇᴄᴛᴇᴅ ?")
+      await message.reply("متصل بالفعل هو الدردشة الخاصة بك ?")
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:

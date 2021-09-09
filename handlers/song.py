@@ -49,10 +49,10 @@ def song(client, message):
         results[0]["views"]
 
     except Exception as e:
-        m.edit("✘ sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ.\n\nᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴀ ᴠᴀʟɪᴅ sᴏɴɢ ɴᴀᴍᴇ.")
+        m.edit("الم يتم العثور على الاغانيه.\n\ابحث بطريقه صحيحه.")
         print(str(e))
         return
-    m.edit("† ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...")
+    m.edit("† يتم التحميل انتظر ...")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)

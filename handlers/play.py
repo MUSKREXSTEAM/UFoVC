@@ -39,7 +39,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer("You not allowed to do this!", show_alert=True)
+            await cb.answer("لا يسمح لك القيام بذلك", show_alert=True)
             return
     return decorator                                                                       
                                           
@@ -162,7 +162,7 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip")
             ],
             [
-                InlineKeyboardButton("📖 PlayList", "playlist"),
+                InlineKeyboardButton(" PlayList", "playlist"),
             ],
             [       
                 InlineKeyboardButton("🗑 Close", "cls")
@@ -214,18 +214,18 @@ async def hfmm(_, message):
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"✅ **Music player has been activated in this chat.** {message.chat.id}"
+            f"✅ **تم تنشيط مشغل الموسيقى في هذه الدردشة.** {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await message.reply("`Processing...`")
         
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("**Music player already deactivated.**")
+            await lel.edit("**مشغل الموسيقى تم إلغاء تنشيط بالفعل.**")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"✅ **Music player has been deactivated in this chat.** {message.chat.id}"
+            f"✅ **تم إلغاء تنشيط مشغل الموسيقى في هذه الدردشة.** {message.chat.id}"
         )
     else:
         await message.reply_text(
@@ -508,7 +508,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
+                    InlineKeyboardButton("⌯ قائمه التحكم", callback_data="menu"),
                     InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
@@ -555,7 +555,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
+                    InlineKeyboardButton("⌯ قائمه التحكم", callback_data="menu"),
                     InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
@@ -639,7 +639,7 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
+                    InlineKeyboardButton("⌯ قائمه التحكم", callback_data="menu"),
                     InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
@@ -701,7 +701,7 @@ async def lol_cb(b, cb):
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
-        await cb.answer("You are not people who requested this song!", show_alert=True)
+        await cb.answer("⚜️ الامر اليس الك", show_alert=True)
         return
     #await cb.message.edit("🔁 **processing...**")
     x=int(x)
@@ -738,7 +738,7 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⌯ ايقاف", callback_data="menu"),
+                    InlineKeyboardButton("⌯ قائمه التحكم", callback_data="menu"),
                     InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")

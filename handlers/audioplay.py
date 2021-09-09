@@ -19,7 +19,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def stream(_, message: Message):
 
-    lel = await message.reply("☢ **ᴘʀᴏᴄᴇssɪɴɢ** sᴏᴜɴᴅ...")
+    lel = await message.reply("☢ **قم بالرد على** ملف صوتي او رابط..")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -27,10 +27,10 @@ async def stream(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="📣 ᴄʜᴀɴɴᴇʟ",
+                        text="قناة السورس",
                         url=f"https://t.me/{UPDATES_CHANNEL}"),
                     InlineKeyboardButton(
-                        text="♞ ᴅᴇᴠ's",
+                        text="الحساب المساعد",
                         url=f"https://t.me/{OWNER_NAME}")
                 ]
             ]
@@ -53,7 +53,7 @@ async def stream(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("♨ ʏᴏᴜ ᴅɪᴅ ɴᴏᴛ ɢɪᴠᴇ ᴍᴇ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴏʀ ʏᴛ ʟɪɴᴋ ᴛᴏ sᴛʀᴇᴀᴍ!")
+        return await lel.edit_text("قم بالرد على رابط او ملف التشغيل ")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
@@ -68,6 +68,6 @@ async def stream(_, message: Message):
         await message.reply_photo(
         photo=f"{AUD_IMG}",
         reply_markup=keyboard,
-        caption=f"🎧 **ɴᴏᴡ ᴘʟᴀʏɪɴɢ** ᴀ sᴏɴɢ ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ {costumer} !\n\n✈ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn}"
+        caption=f"🎧 **تم الطلب** بواسطت {costumer} !\n\n سورس ميلانو  {bn}"
         )   
         return await lel.delete()
