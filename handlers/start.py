@@ -34,9 +34,10 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
-⌁ ⁞ **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) في بوت تشغيل الاغاني في المكالمه 'الجماعيه**
+⌁ ⁞ ** في بوت تشغيل الاغاني  في المكالمه ' الجماعيه**
 ⌁ ⁞ **قم برفع البوت مشرف وارسل'الاوامر واختر ماتريد تشغيله**
-⌁ ⁞ **العرظ اوامر البوت اظغط في خاص البوت على زر الاوامر او كلمه, /help**
+⌁ ⁞ **العرظ اوامر البوت اظغط في خاص البوت 
+⌁ ⁞ **على زر الاوامر او كلمه, /help**
 ⌁ ⁞ **البوت مقدم من سورس ميلانو**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
