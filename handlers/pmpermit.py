@@ -17,7 +17,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-            f"✨ ʜᴇʟʟᴏ, ɪ'ᴍ ᴀ ᴏғғɪᴄɪᴀʟ **ᴍᴜsɪᴄ ᴀssɪsᴛᴀɴᴛ ᴏғ {BOT_NAME}.**\n\n❗️ **notes:**\n\n⫸ don't spam message.\n⫸ don't send me anything confidential\n\n⨀ Join to @{UPDATES_CHANNEL} \n⨀ Join to @{GROUP_SUPPORT}\n\n👩🏻‍💻 Dev: @{OWNER_NAME}\n\n",
+            f"⌁ ⁞ اهلا عزيزي,انا ' البوت المساعد**البوت تشغيل الاغاني {BOT_NAME}.**\n\n️ **انتظر موافقت المطور على طلب الرسائل**\n\n⫸ لا' لادعم الرد في الخاص قم بمراسلت المطور .\n⫸ او'ترك رساله هنا \n\n⨀ المطور @{DEV_NAME} \n قناة البوت @{GROUP_SUPPORT}\n\n الحساب المساعد: @{OWNER_NAME}\n\n",
             )
             return
 
@@ -31,11 +31,11 @@ async def bye(client: Client, message: Message):
         queryy = text[1]
         if queryy == "on":
             PMSET = True
-            await message.reply_text("✔ ᴘᴍᴘᴇʀᴍɪᴛ ᴛᴜʀɴᴇᴅ ᴏɴ")
+            await message.reply_text("✔ تم السماح بارسال رسائل الى الحساب المساعد")
             return
         if queryy == "off":
             PMSET = None
-            await message.reply_text("✘ ᴘᴍᴘᴇʀᴍɪᴛ ᴛᴜʀɴᴇᴅ ᴏғғ")
+            await message.reply_text("✘ تم تعطيل ارسال الرسائل")
             return
 
 @USER.on_message(filters.text & filters.private & filters.me)        
@@ -43,7 +43,7 @@ async def autopmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("approved to pm due to outgoing messages")
+        await message.reply_text("تمت الموافقه على طلب المراسله")
         return
     message.continue_propagation()    
     
@@ -52,7 +52,7 @@ async def pmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("✔ approved to pm.")
+        await message.reply_text("✔")
         return
     message.continue_propagation()    
     
@@ -62,7 +62,7 @@ async def rmpmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if chat_id in pchats:
         pchats.remove(chat_id)
-        await message.reply_text("✘ disapproved to pm.")
+        await message.reply_text("✘ تم رفظ طلب المراسله.")
         return
     message.continue_propagation()
     
