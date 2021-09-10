@@ -67,7 +67,7 @@
             "value": "ENABLE"
         },
         "UPDATES_CHANNEL": {
-            "description": "تحديثاتــ سورس يــوفـــو !!!",
+            "description": "تحديثاتــ سورس ميلانو ميوزك!!!",
             "required": false,
             "value": "OR_33"
         },
@@ -75,7 +75,15 @@
             "description": "قناة البوت",
             "required": false,
             "value": "GVVVV6"
+
+        },
+        "DEV_NAME": {
+            "description": "معرف المطور",
+            "required": false,
+            "value": "OR_33"
         }
+        
+        
     },
     "buildpacks": [
     {
