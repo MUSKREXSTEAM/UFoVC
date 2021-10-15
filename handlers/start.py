@@ -47,7 +47,7 @@ async def start_(client: Client, message: Message):
                         "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "⌯الاوامر", url="https://t.me/MUZK1BOT/14"
+                         "⌯الاوامر", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
                         "⌯الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
@@ -56,10 +56,7 @@ async def start_(client: Client, message: Message):
                         "⌯قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯سورس البوت", url=f"https://t.me/QQOQQD")               
-                 ],[
-                    InlineKeyboardButton(
-                        "⌯مطور السورس", url="https://t.me/OR_33"
+                        "⌯سورس البوت", url=f"https://t.me/QQOQQD")              
                     )
                 ]
             ]
