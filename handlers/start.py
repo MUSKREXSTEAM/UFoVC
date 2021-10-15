@@ -79,7 +79,7 @@ async def start(client: Client, message: Message):
                         "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "⌯ المطور", url=f"https://t.me/{DEV_NAME}"
                     )
                 ]
             ]
@@ -170,7 +170,7 @@ async def help_(client: Client, message: Message):
                         "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "⌯ المطور", url=f"https://t.me/{DEV_NAME}"
                     )
                 ],
                 [
