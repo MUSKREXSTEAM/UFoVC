@@ -47,7 +47,7 @@ async def start_(client: Client, message: Message):
                         "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "⌯الاوامر", url="https://t.me/EO000O"
+                         "⌯االاوامر", url="https://t.me/{OWNER_NAME}"
                     ),
                     InlineKeyboardButton(
                         "⌯الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
