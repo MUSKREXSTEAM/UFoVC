@@ -149,7 +149,7 @@ def updated_stats(chat, queue, vol=100):
     return stats
 
 def r_ply(type_):
-    if type_ == "play":
+    if type_ == "plyay":
         pass
     else:
         pass
