@@ -17,17 +17,17 @@
         "BOT_NAME": {
             "description": "إســـم بوتــك !.",
             "required": false,
-            "value": "мυsιc fкнαмα 𝆹𝅥𝅮 "
+            "value": ""
         },
         "BOT_USERNAME": {
             "description": "يوزر  بوتــك منغيــر -> @",
             "required": true,
-            "value": "SDSD50BOT"
+            "value": "MEUZKBOT"
         },
         "ASSISTANT_NAME": {
             "description": "يوزر المساع من دون @",
             "required": true,
-            "value": "IIBBBBB"
+            "value": "KKKKGU"
         },
         "BG_IMAGE": {
             "description": "خلــفية",
@@ -42,7 +42,7 @@
         "OWNER_NAME": {
             "description": "يوزر المساعد",
             "required": false,
-            "value": "IIBBBBB"
+            "value": "KKKKGU"
         },
         "API_ID": {
             "description": "حــط App ايدي",
@@ -74,13 +74,13 @@
         "GROUP_SUPPORT": {
             "description": "قناة البوت",
             "required": false,
-            "value": "EO000O"
+            "value": "gvvvv6"
 
         },
         "DEV_NAME": {
             "description": "معرف المطور",
             "required": false,
-            "value": "UO0000"
+            "value": "or_33"
         }
         
         
