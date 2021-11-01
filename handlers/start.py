@@ -30,37 +30,6 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@Client.on_message(command("start") & filters.private & ~filters.edited)
-async def start_(client: Client, message: Message):
-    await message.reply_text(
-        f"""<b>
-</b>""",
-        reply_markup=InlineKeyboardMarkup(
-            [ 
-                [
-                    InlineKeyboardButton(
-                        "", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-                ],[
-                    InlineKeyboardButton(
-                         "", url="https://t.me/{OWNER_NAME}"
-                    ),
-                    InlineKeyboardButton(
-                        "", url=f"https://t.me/{OWNER_NAME}")
-                ],[
-                    InlineKeyboardButton(
-                        "", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "", url=f"https://t.me/QQOQQD")               
-                 ],[
-                    InlineKeyboardButton(
-                        "", url="https://t.me/"
-                    )
-                ]
-            ]
-        ),
-     disable_web_page_preview=True
-    )
 
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
