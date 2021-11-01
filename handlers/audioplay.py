@@ -19,7 +19,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def stream(_, message: Message):
 
-    lel = await message.reply("☢ **قم بالرد على** ملف صوتي او رابط..")
+    lel = await message.reply("☢ **يتم**التحميل")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
