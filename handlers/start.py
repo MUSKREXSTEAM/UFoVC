@@ -30,6 +30,42 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
+@Client.on_message(command("start") & filters.private & ~filters.edited)
+async def start_(client: Client, message: Message):
+    await message.reply_text(
+        f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
+⌁ ⁞ ** في بوت تشغيل الاغاني  في المكالمه ' الجماعيه**
+⌁ ⁞ **قم برفع البوت مشرف وارسل'الاوامر واختر ماتريد تشغيله**
+⌁ ⁞ **العرظ اوامر البوت اظغط في خاص البوت**
+⌁ ⁞ **على زر الاوامر او كلمه**
+⌁ ⁞ **البوت مقدم من سورس ميلانو**
+</b>""",
+        reply_markup=InlineKeyboardMarkup(
+            [ 
+                [
+                    InlineKeyboardButton(
+                        "", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                ],[
+                    InlineKeyboardButton(
+                         "", url="https://t.me/MUZK1BOT/14"
+                    ),
+                    InlineKeyboardButton(
+                        "", url=f"https://t.me/{OWNER_NAME}")
+                ],[
+                    InlineKeyboardButton(
+                        "", url=f"https://t.me/{GROUP_SUPPORT}"
+                    ),
+                    InlineKeyboardButton(
+                        "", url=f"https://t.me/QQOQQD")               
+                 ],[
+                    InlineKeyboardButton(
+                        "", url="https://t.me/{OWNER_NAME}"
+                    )
+                ]
+            ]
+        ),
+     disable_web_page_preview=True
+    )
 
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
@@ -46,7 +82,7 @@ async def start(client: Client, message: Message):
                         "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/"
+                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
@@ -68,6 +104,86 @@ async def help(client: Client, message: Message):
         )
     )
 
+@Client.on_message(command("help") & filters.private & ~filters.edited)
+async def help_(client: Client, message: Message):
+    await message.reply_text(
+        f"""<b>Hello {message.from_user.mention()}, welcome to help menu ✨
+• الاوامر 🛠 
+
+- /play <اسم الأغنية> 
+ـ تشغيل الأغنية التي طلبتها. 
+
+- /playlist 
+ـ عرض قائمة التشغيل الآن. 
+
+- /song <اسم الاغنيه>
+ـ تنزيل الأغاني التي تريدها بسرعة. 
+
+- /search <اسم الاغنيه> 
+ـ البحث في اليوتيوب مع التفاصيل. 
+
+- /vsong <اسم الاغنيه>
+ـ تنزيل مقاطع الفيديو التي تريدها بسرعة
+
+- /lyric <اسم الاغنيه>
+ـ إحضار كلمات الاغنيه. 
+
+• الاوامر الخاصه بِ المشرفين فقط 👷‍♂️ . 
+ 
+- /player  
+ـ فتح لوحة إعدادات مشغل الموسيقى
+
+- /pause 
+ـ وقف تشغيل الاغنيه الحاليه. 
+
+- /resume
+ـ استئناف تشغيل الأغنية. 
+
+- /skip 
+ـ التقدم للأغنية التالية
+
+- /end 
+ـ إيقاف تشغيل الموسيقى. 
+
+- /musicplayer on 
+ـ لتعطيل مشغل الموسيقى في مجموعتك. 
+
+- /musicplayer off 
+- لتمكين مشغل الموسيقى في مجموعتك. 
+
+- /userbotjoin 
+- دعوة المساعد إلى الدردشه الحاليه 
+
+- /userbotleave 
+- إزالة المساعد من الدردشة الحالية. 
+
+- /reload 
+- تحديث قائمة الإدارة. 
+
+- /uptime 
+- التحقق من وقت تشغيل البوت
+
+- /ping 
+- تحقق من حالة البوت
+</b>""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
+                    ),
+                    InlineKeyboardButton(
+                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "⌯سروس البوت", url=f"https://t.me/QQOQQD"
+                    )
+                ]
+            ]
+        )
+    )
 
 
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
