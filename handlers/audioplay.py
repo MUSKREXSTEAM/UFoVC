@@ -15,11 +15,11 @@ from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-@Client.on_message(command("stream") & other_filters)
+@Client.on_message(command("play") & other_filters)
 @errors
 async def stream(_, message: Message):
 
-    lel = await message.reply("☢ **قم بالرد على** ملف صوتي او رابط..")
+    lel = await message.reply("جاري التشغيل انتظر 🤝..")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
