@@ -30,33 +30,28 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@Client.on_message(command("strt") & filters.private & ~filters.edited)
+@Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
-⌁ ⁞ ** في بوت تشغيل الاغاني  في المكالمه ' الجماعيه**
-⌁ ⁞ **قم برفع البوت مشرف وارسل'الاوامر واختر ماتريد تشغيله**
-⌁ ⁞ **العرظ اوامر البوت اظغط في خاص البوت**
-⌁ ⁞ **على زر الاوامر او كلمه**, /help**
-⌁ ⁞ ** البوت مقدم من سورس ميلانو **
+        f"""<b>
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "⌯االاوامر", url="https://t.me/{OWNER_NAME}"
+                         "", url="https://t.me/{OWNER_NAME}"
                     ),
                     InlineKeyboardButton(
-                        "⌯الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
+                        "", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "⌯قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯سورس البوت", url=f"https://t.me/QQOQQD")               
+                        "", url=f"https://t.me/QQOQQD")               
                  ],[
                     InlineKeyboardButton(
                         "", url="https://t.me/"
