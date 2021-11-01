@@ -30,7 +30,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@Client.on_message(command("styart") & filters.private & ~filters.edited)
+@Client.on_message(command("strt") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
