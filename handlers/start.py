@@ -37,26 +37,26 @@ async def start_(client: Client, message: Message):
 ⌁ ⁞ ** في بوت تشغيل الاغاني  في المكالمه ' الجماعيه**
 ⌁ ⁞ **قم برفع البوت مشرف وارسل'الاوامر واختر ماتريد تشغيله**
 ⌁ ⁞ **العرظ اوامر البوت اظغط في خاص البوت**
-⌁ ⁞ **على زر الاوامر او كلمه**
-⌁ ⁞ **البوت مقدم من سورس ميلانو**
+⌁ ⁞ **على زر الاوامر او كلمه**, /help**
+⌁ ⁞ ** البوت مقدم من سورس ميلانو **
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "", url="https://t.me/MUZK1BOT/14"
+                         "⌯الاوامر", url="https://t.me/MUZK1BOT/14"
                     ),
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/{OWNER_NAME}")
+                        "⌯الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "⌯قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/QQOQQD")               
+                        "⌯سورس البوت", url=f"https://t.me/QQOQQD")               
                  ],[
                     InlineKeyboardButton(
                         "", url="https://t.me/{OWNER_NAME}"
@@ -173,7 +173,7 @@ async def help_(client: Client, message: Message):
                         "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
                 [
