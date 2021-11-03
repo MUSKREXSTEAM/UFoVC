@@ -1,4 +1,3 @@
-#سالِم
 from time import time
 from datetime import datetime
 from config import BOT_USERNAME, BOT_NAME, ASSISTANT_NAME, OWNER_NAME, UPDATES_CHANNEL, GROUP_SUPPORT
@@ -33,33 +32,29 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
-⌁ ⁞ ** في بوت تشغيل الاغاني  في المكالمه ' الجماعيه**
-⌁ ⁞ **قم برفع البوت مشرف وارسل'الاوامر واختر ماتريد تشغيله**
-⌁ ⁞ **العرظ اوامر البوت اظغط في خاص البوت**
-⌁ ⁞ **على زر الاوامر او كلمه**, /help**
-⌁ ⁞ ** البوت مقدم من سورس ميلانو **
+        f"""<b>✨ **مرحبا {message.from_user.first_name}** \n
+💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) هذا اسمي !**
+
+⋆  **اختصاصي تشغيل الاغاني فلمحادثات الصوتيه**
+
+⋆  **اضفني الان الي مجموعتك لكي تبدا الحفله**
+
+⋆  **اضغط علي هذا الامر /help لعرض الاوامر**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "اضف البوت لمجموعتك", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "⌯الاوامر", url="https://t.me/MUZK1BOT/14"
+                        "قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
-                ],[
-                    InlineKeyboardButton(
-                        "⌯قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "⌯سورس البوت", url=f"https://t.me/QQOQQD")               
+                        "╞. قناه السورس ╡", url=f"https://t.me/{UPDATES_CHANNEL}")               
                  ],[
                     InlineKeyboardButton(
-                        "", url="https://t.me/{OWNER_NAME}"
+                        "", url="https://t.me/"
                     )
                 ]
             ]
@@ -74,30 +69,30 @@ async def start(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        f"""✔ **ʙᴏᴛ ɪs ʀᴜɴɴɪɴɢ**\n<b>☣ **ᴜᴘᴛɪᴍᴇ:**</b> `{uptime}`""",
+        f"""✔ **الروبوت قيد التشغيل**\n<b>💞 **ᴜᴘᴛɪᴍᴇ:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "جروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "قناه السورس", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
         )
     )
 
-@Client.on_message(command(["help", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["الاوامر", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>☢ ʜᴇʟʟᴏ {message.from_user.mention()}, ᴘʟᴇᴀsᴇ ᴛᴀᴘ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ ʏᴏᴜ ᴄᴀɴ ʀᴇᴀᴅ ғᴏʀ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ</b>""",
+        f"""<b> مرحبا {message.from_user.mention()}, يرجى النقر فوق الزر أدناه لرؤية رسالة المساعدة التي يمكنك قراءتها لاستخدام هذا الروبوت</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="✔ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ", url=f"https://t.me/{BOT_USERNAME}?start=help"
+                        text="✔ كيف تستعملني", url=f"https://t.me/{BOT_USERNAME}?start=help"
                     )
                 ]
             ]
@@ -107,8 +102,7 @@ async def help(client: Client, message: Message):
 @Client.on_message(command("help") & filters.private & ~filters.edited)
 async def help_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>Hello {message.from_user.mention()}, welcome to help menu ✨
-• الاوامر 🛠 
+        f"""<b>• الاوامر 🛠 
 
 - /play <اسم الأغنية> 
 ـ تشغيل الأغنية التي طلبتها. 
@@ -164,21 +158,21 @@ async def help_(client: Client, message: Message):
 - التحقق من وقت تشغيل البوت
 
 - /ping 
-- تحقق من حالة البوت
+- تحقق من حالة البوت 
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "╞.MELANO TEAM.╡", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⌯سروس البوت", url=f"https://t.me/QQOQQD"
+                        "", url=f"https://t.me/JepThon"
                     )
                 ]
             ]
@@ -186,18 +180,18 @@ async def help_(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["بنك", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
     delta_ping = time() - start
     await m_reply.edit_text(
-        "✈ `ᴘᴏɴɢ!!`\n"
-        f"☣ `{delta_ping * 1000:.3f} ᴍs`"
+        "🎶 `ᴘᴏɴɢ!!`\n"
+        f"💞 `{delta_ping * 1000:.3f} ᴍs`"
     )
 
 
-@Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["فحص", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
 @authorized_users_only
 async def get_uptime(client: Client, message: Message):
     current_time = datetime.utcnow()
