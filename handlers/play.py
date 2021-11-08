@@ -39,7 +39,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer("لا يسمح لك القيام بذلك!", show_alert=True)
+            await cb.answer("لا يسمح لك القيام بذلك", show_alert=True)
             return
     return decorator                                                                       
                                           
@@ -114,7 +114,7 @@ async def playlist(client, message):
         return
     queue = que.get(message.chat.id)
     if not queue:
-        await message.reply_text("**لا شيء في التدفق!**")
+        await message.reply_text("**Nothing in streaming!**")
     temp = []
     for t in queue:
         temp.append(t)
@@ -162,10 +162,10 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip")
             ],
             [
-                InlineKeyboardButton("معلومات الاغنيه", "playlist"),
+                InlineKeyboardButton(" PlayList", "playlist"),
             ],
             [       
-                InlineKeyboardButton("اخفاء القائمه..🙂", "cls")
+                InlineKeyboardButton("🗑 Close", "cls")
             ]        
         ]
     )
@@ -210,7 +210,7 @@ async def hfmm(_, message):
     if status == "ON" or status == "on" or status == "On":
         lel = await message.reply("`Processing...`")
         if not message.chat.id in DISABLED_GROUPS:
-            await lel.edit("**تم تنشيط مشغل الموسيقى بالفعل.**")
+            await lel.edit("**Music player already activated.**")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
@@ -221,7 +221,7 @@ async def hfmm(_, message):
         lel = await message.reply("`Processing...`")
         
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("**تم إلغاء تنشيط مشغل الموسيقى بالفعل.**")
+            await lel.edit("**مشغل الموسيقى تم إلغاء تنشيط بالفعل.**")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
@@ -312,7 +312,7 @@ async def m_cb(b, cb):
     elif type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:   
-            await cb.message.edit("لا شيء في التدفق!")
+            await cb.message.edit("Nothing in streaming!")
         temp = []
         for t in queue:
             temp.append(t)
@@ -372,11 +372,11 @@ async def m_cb(b, cb):
                 
                 ],
                 [
-                    InlineKeyboardButton("معلومات الاغنيه", "playlist"),
+                    InlineKeyboardButton("📖 PlayList", "playlist"),
                 
                 ],
                 [       
-                    InlineKeyboardButton("اخفاء القائمه.💞", "cls")
+                    InlineKeyboardButton("🗑 Close", "cls")
                 ]        
             ]
         )
@@ -453,17 +453,17 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "🤖: لقد انضممت إلى هذه المجموعة لتشغيل الموسيقى على الدردشة الصوتية"
+                        message.chat.id, "🤖: I'm joined to this group for playing music on voice chat"
                     )
                     await lel.edit(
-                        "<b>انضم المساعد userbot إلى الدردشة الخاصة بك</b>",
+                        "<b>Helper userbot joined your chat</b>",
                     )
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>💞 Flood Wait Error 💞\n{user.first_name} تأكد من عدم حظر المستخدم في المجموعــة."
+                        f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} تأكد من عدم حظر المستخدم في المجموعــة."
                         f"\n\n أضــف @{ASSISTANT_NAME} يدويًــا إلى مجموعاتك وحاول مرة أخــرى </b>",
                     )
     try:
@@ -471,7 +471,7 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} تم حظره في هذه المجموعة ، اطلب من المشرف إلغاء الحظر @{ASSISTANT_NAME} يدويا.</i>"
+            f"<i>{user.first_name} was banned in this group, ask admin to unban @{ASSISTANT_NAME} manually.</i>"
         )
         return
     text_links=None
@@ -503,21 +503,21 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"💞 **لا يمــكن تشغيــل الأغانــي التــي تزيــد مدتهــا عــن** `{DURATION_LIMIT}` **دقيقـــة!**"
+                f"❌ **لا يمــكن تشغيــل الأغانــي التــي تزيــد مدتهــا عــن** `{DURATION_LIMIT}` **دقيقـــة!**"
             )
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("عرض القائمه.. 💞", callback_data="menu"),
-                    InlineKeyboardButton("اخفاء القائمه.. 💞", callback_data="cls"),
+                    InlineKeyboardButton("⌯ قائمه التحكم", callback_data="menu"),
+                    InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("╞.MELANO TEAM.╡", url=f"https://t.me/qqoqqd")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
                 ],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/19d68d531fd2f6f96e368.jpg"
+        thumb_name = "https://telegra.ph/file/b1fe76175bcf213770ca6.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -530,7 +530,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("💞 **البحث عن الأغنية...**")
+        await lel.edit("🔎 **Finding song...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -555,10 +555,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("عرض القائمه.. 💞", callback_data="menu"),
-                    InlineKeyboardButton("اخفاء القائمه.. 💞", callback_data="cls"),
+                    InlineKeyboardButton("⌯ قائمه التحكم", callback_data="menu"),
+                    InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("╞.MELANO TEAM.╡", url=f"https://t.me/qqoqqd")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
                 ],
             ]
         )
@@ -578,27 +578,30 @@ async def play(_, message: Message):
           await lel.edit("**يرجــى أن ترسل لــي إسم الاغنيــة !**")
         # veez project
         try:
-            toxxt = "🎶 __ إخــتر اغنيــة للتشغــيل:__\n\n"
+            toxxt = "⚡ __ إخــتر اغنيــة للتشغــيل:__\n\n"
             j = 0
             useer=user_name
-            emojilist = ["1️⃣","2️⃣","3️⃣"]
-            while j < 3:
+            emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣"]
+            while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ⋆ ♥️**Duration** - {results[j]['duration']}\n"
-                toxxt += f" ⋆  🎶 Powered by {BOT_NAME} A.I\n\n"
+                toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
+                toxxt += f" └ ⚡ Powered by {BOT_NAME} A.I\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("انقر لتشغيل الاغنيه الاولى.. ", callback_data=f'plll 0|{query}|{user_id}'),
+                        InlineKeyboardButton("1️⃣", callback_data=f'plll 0|{query}|{user_id}'),
+                        InlineKeyboardButton("2️⃣", callback_data=f'plll 1|{query}|{user_id}'),
+                        InlineKeyboardButton("3️⃣", callback_data=f'plll 2|{query}|{user_id}'),
                     ],
                     [
-                        InlineKeyboardButton("انقر لتشغيل الاغنيه الثانيه.. ", callback_data=f'plll 2|{query}|{user_id}'),
+                        InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
+                        InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
                     [
-                        InlineKeyboardButton("انقر لتشغيل الاغنيه الثالثه.. ", callback_data=f'plll 3|{query}|{user_id}'),
+                        InlineKeyboardButton("6️⃣", callback_data=f'plll 5|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="اخفاء القائمه 💞", callback_data="cls")],
+                    [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
                 ]
             )
             await message.reply_photo(
@@ -636,10 +639,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("عرض القائمه..💞", callback_data="menu"),
-                    InlineKeyboardButton("اخفاء القائمه..💞", callback_data="cls"),
+                    InlineKeyboardButton("⌯ قائمه التحكم", callback_data="menu"),
+                    InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("╞.MELANO TEAM.╡", url=f"https://t.me/qqoqqd") 
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
                 ],
             ]
             )
@@ -657,7 +660,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"♥️**Track added to the queue**\n\n💞 **الإسـم :** [{title[:35]}]({url})\n⏱ **Duration:** `{duration}`\n🎧 **مطلوبــة مـن :** {message.from_user.mention}\n" \
+            caption=f"💡 **Track added to the queue**\n\n🏷 **الإسـم :** [{title[:35]}]({url})\n⏱ **Duration:** `{duration}`\n🎧 **مطلوبــة مـن :** {message.from_user.mention}\n" \
                    +f"🔢 **At Position:** » `{position}` «",
             reply_markup=keyboard
         )
@@ -673,11 +676,11 @@ async def play(_, message: Message):
         try:
             callsmusic.pytgcalls.join_group_call(chat_id, file_path)
         except:
-            message.reply("**مجموعة الدردشة الصوتية غير نشطة ، لا يمكن تشغيل أغنية.**")
+            message.reply("**Voice chat group not active, can't play a song.**")
             return
         await message.reply_photo(
             photo="final.png",
-            caption=f"💞 **الإسـم :** [{title[:35]}]({url})\n⏱ **Duration:** `{duration}`\n♥️**Status:** `Playing`\n" \
+            caption=f"🏷 **الإسـم :** [{title[:35]}]({url})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n" \
                    +f"🎧 **مطلوبــة مـن :** {message.from_user.mention}",
             reply_markup=keyboard
         )
@@ -698,9 +701,9 @@ async def lol_cb(b, cb):
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
-        await cb.answer("أنتم لستم من طلب هذه الأغنية!", show_alert=True)
+        await cb.answer("⚜️ الامر اليس الك", show_alert=True)
         return
-    #await cb.message.edit("🔁 **تجهيز...**")
+    #await cb.message.edit("🔁 **processing...**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -735,10 +738,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("عرض القائمه..💞", callback_data="menu"),
-                    InlineKeyboardButton("اخفاء القائمه..💞", callback_data="cls"),
+                    InlineKeyboardButton("⌯ قائمه التحكم", callback_data="menu"),
+                    InlineKeyboardButton("⌯ حذف الكليشه", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("╞.MELANO TEAM.╡", url=f"https://t.me/qqoqqd")
+                    InlineKeyboardButton("⌯ قناة السورس", url=f"https://t.me/QQOQQD")
                 ],
             ]
     )
@@ -760,7 +763,7 @@ async def lol_cb(b, cb):
         await b.send_photo(
         chat_id,
         photo="final.png",
-        caption=f"♥️**Track added to the queue**\n\n💞 **الإسـم :** [{title[:35]}]({url})\n⏱ **Duration:** `{duration}`\n🎧 **مطلوبــة مـن :** {r_by.mention}\n" \
+        caption=f"💡 **Track added to the queue**\n\n🏷 **الإسـم :** [{title[:35]}]({url})\n⏱ **Duration:** `{duration}`\n🎧 **مطلوبــة مـن :** {r_by.mention}\n" \
                +f"🔢 **At Position:** » `{position}` «",
         reply_markup=keyboard,
         )
@@ -781,7 +784,7 @@ async def lol_cb(b, cb):
         await b.send_photo(
         chat_id,
         photo="final.png",
-        caption=f"💞 **الإســم :** [{title[:35]}]({url})\n⏱ **Duration :** `{duration}`\n♥️**Status :** `Playing`\n" \
+        caption=f"🏷 **الإســم :** [{title[:35]}]({url})\n⏱ **Duration :** `{duration}`\n💡 **Status :** `Playing`\n" \
                +f"🎧 **مطلـوبة مـن :** {r_by.mention}",
         reply_markup=keyboard,
         )
