@@ -1,19 +1,4 @@
-Skip to content
-SuSaleM
-/
-UFoVC
-Public
-Code
-Pull requests
-10
-Actions
-Security
-Insights
-UFoVC/handlers/start.py
 
-SuSaleM يــوفــو
- 1 contributor
-192 lines (176 sloc)  7.82 KB
 #سالِم
 from time import time
 from datetime import datetime
