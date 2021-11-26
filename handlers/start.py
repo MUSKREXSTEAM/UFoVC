@@ -1,3 +1,19 @@
+Skip to content
+SuSaleM
+/
+UFoVC
+Public
+Code
+Pull requests
+10
+Actions
+Security
+Insights
+UFoVC/handlers/start.py
+
+SuSaleM يــوفــو
+ 1 contributor
+192 lines (176 sloc)  7.82 KB
 #سالِم
 from time import time
 from datetime import datetime
@@ -34,11 +50,10 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ **ᴡᴇʟᴄᴏᴍᴇ {message.from_user.first_name}** \n
-⌁ ⁞ ** في بوت تشغيل الاغاني  في المكالمه ' الجماعيه**
-⌁ ⁞ **قم برفع البوت مشرف وارسل'الاوامر واختر ماتريد تشغيله**
-⌁ ⁞ **العرظ اوامر البوت اظغط في خاص البوت**
-⌁ ⁞ **على زر الاوامر او كلمه**, /help**
-⌁ ⁞ ** البوت مقدم من سورس ميلانو **
+💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) ᴀʟʟᴏᴡ ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ ᴏɴ ɢʀᴏᴜᴘs ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ɴᴇᴡ ᴛᴇʟᴇɢʀᴀᴍ's ᴠᴏɪᴄᴇ ᴄʜᴀᴛs !**
+💡 **ғɪɴᴅ ᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ's ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ʜᴏᴡ ᴛʜᴇ ᴡᴏʀᴋ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ » 📚 ᴄᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ !**
+❓ **ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀʟʟ ғᴇᴀᴛᴜʀᴇ ᴏғ ᴛʜɪs ʙᴏᴛ, ᴊᴜsᴛ ᴛʏᴘᴇ /help**
+✂ **ɪ ᴡᴀs ᴍᴀᴅᴇ ʙʏ ѕᴀʟᴇᴍ & ᴜғᴏ ғᴏʀ ᴘʟᴀʏɪɴɢ ᴍᴜsɪᴄ ᴏɴ ᴠᴄɢ**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
@@ -47,19 +62,19 @@ async def start_(client: Client, message: Message):
                         "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "⌯الاوامر", url="https://t.me/MUZK1BOT/14"
+                         "📚 ᴄᴏᴍᴍᴀɴᴅs", url="https://t.me/WzUserBoT/10"
                     ),
                     InlineKeyboardButton(
-                        "⌯الحساب المساعد", url=f"https://t.me/{OWNER_NAME}")
+                        "💝 ᴅᴏɴᴀᴛᴇ", url=f"https://t.me/{OWNER_NAME}")
                 ],[
                     InlineKeyboardButton(
-                        "⌯قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👥 ᴏғғɪᴄɪᴀʟ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯سورس البوت", url=f"https://t.me/QQOQQD")               
+                        "📣 ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")               
                  ],[
                     InlineKeyboardButton(
-                        "⌯ المطور", url="https://t.me/{OWNER_NAME}"
+                        "🧪", url="https://t.me/WzUserBoT/6"
                     )
                 ]
             ]
@@ -79,10 +94,10 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "☢ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
@@ -108,77 +123,57 @@ async def help(client: Client, message: Message):
 async def help_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Hello {message.from_user.mention()}, welcome to help menu ✨
-• الاوامر 🛠 
-
-- /play <اسم الأغنية> 
-ـ تشغيل الأغنية التي طلبتها. 
-
-- /playlist 
-ـ عرض قائمة التشغيل الآن. 
-
-- /song <اسم الاغنيه>
-ـ تنزيل الأغاني التي تريدها بسرعة. 
-
-- /search <اسم الاغنيه> 
-ـ البحث في اليوتيوب مع التفاصيل. 
-
-- /vsong <اسم الاغنيه>
-ـ تنزيل مقاطع الفيديو التي تريدها بسرعة
-
-- /lyric <اسم الاغنيه>
-ـ إحضار كلمات الاغنيه. 
-
-• الاوامر الخاصه بِ المشرفين فقط 👷‍♂️ . 
- 
-- /player  
-ـ فتح لوحة إعدادات مشغل الموسيقى
-
-- /pause 
-ـ وقف تشغيل الاغنيه الحاليه. 
-
-- /resume
-ـ استئناف تشغيل الأغنية. 
-
-- /skip 
-ـ التقدم للأغنية التالية
-
-- /end 
-ـ إيقاف تشغيل الموسيقى. 
-
-- /musicplayer on 
-ـ لتعطيل مشغل الموسيقى في مجموعتك. 
-
-- /musicplayer off 
-- لتمكين مشغل الموسيقى في مجموعتك. 
-
-- /userbotjoin 
-- دعوة المساعد إلى الدردشه الحاليه 
-
-- /userbotleave 
-- إزالة المساعد من الدردشة الحالية. 
-
-- /reload 
-- تحديث قائمة الإدارة. 
-
-- /uptime 
-- التحقق من وقت تشغيل البوت
-
-- /ping 
-- تحقق من حالة البوت
+\n📙 HOW TO USE ME ?
+\n1. first add me to your group.
+2. promote me as admin and give all permission.
+3. then, add @{ASSISTANT_NAME} to your group or type /userbotjoin.
+3. make sure you turn on the voice chat first before start playing music.
+\n💁🏻‍♀️ **commands for all user:**
+\n/play (song name) - play song from youtube
+/stream (reply to audio) - play song using audio file
+/playlist - show the list song in queue
+/song (song name) - download song from youtube
+/search (video name) - search video from youtube detailed
+/vsong (video name) - download video from youtube detailed
+/lyric - (song name) lyrics scrapper
+/vk (song name) - download song from inline mode
+\n👷🏻‍♂️ **commands for admins:**
+\n/player - open music player settings panel
+/pause - pause the music streaming
+/resume - resume the music was paused
+/skip - skip to the next song
+/end - stop music streaming
+/userbotjoin - invite assistant join to your group
+/reload - for refresh the admin list
+/cache - for cleared admin cache
+/auth - authorized user for using music bot
+/deauth - unauthorized for using music bot
+/musicplayer (on / off) - disable / enable music player in your group
+\n🎧 channel streaming commands:
+\n/cplay - stream music on channel voice chat
+/cplayer - show the song in streaming
+/cpause - pause the streaming music
+/cresume - resume the streaming was paused
+/cskip - skip streaming to the next song
+/cend - end the streaming music
+/admincache - refresh the admin cache
+\n🧙‍♂️ command for sudo users:
+\n/userbotleaveall - order the assistant to leave from all group
+/gcast - send a broadcast message trought the assistant
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⌯ قناة البوت", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "☣ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "⌯ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⌯سروس البوت", url=f"https://t.me/QQOQQD"
+                        "♞🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/WzUserBoT/6"
                     )
                 ]
             ]
